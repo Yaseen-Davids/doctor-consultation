@@ -1,0 +1,9 @@
+@mixin content-header {
+  font-family: "Noto Serif", serif;
+  color: #333;
+}
+
+@mixin content-info {
+  font-family: "Nunito Sans", sans-serif;
+  color: #9e9e9e;
+}
