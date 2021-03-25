@@ -21,7 +21,17 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="style.css" />
+
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="main-container">
@@ -33,7 +43,12 @@
             <div class="home-nav-logo">
               <p>Medika<span class="home-nav-logo-dot">.</span></p>
             </div>
-            <div class="home-nav-pages">
+            <div class="home-nav-hamburger-wrapper" id="hamburger-button">
+              <a href="#" class="home-nav-hamburger">
+                <i class="lni lni-menu"></i>
+              </a>
+            </div>
+            <div class="home-nav-pages" id="nav-links" data-aos="fade-left">
               <a href="#">Home</a>
               <a href="#">Services</a>
               <a href="#">Doctors</a>
@@ -44,7 +59,7 @@
 
           <!-- HOME INFO -->
           <div class="home-info">
-            <div class="home-info-content">
+            <div class="home-info-content" data-aos="fade-right">
               <div class="home-info-content-wrapper">
                 <h1>We Always Provide Best Service</h1>
                 <p>
@@ -56,7 +71,7 @@
                 </div>
               </div>
             </div>
-            <div class="home-info-image">
+            <div class="home-info-image" data-aos="fade-left">
               <img src="./images/home-image.png" />
             </div>
           </div>
@@ -64,7 +79,7 @@
       </div>
 
       <!-- BOOKING -->
-      <div class="booking-section">
+      <div class="booking-section" data-aos="fade-up" data-aos-offset="100">
         <div class="container-wrapper">
           <div class="section-header">
             <h1>Weekly Timetable</h1>
@@ -107,7 +122,7 @@
       </div>
 
       <!-- CONTACT -->
-      <div class="contact-section">
+      <div class="contact-section" data-aos="fade-up" data-aos-offset="300">
         <div class="container-wrapper">
           <div class="contact-section-header"></div>
           <div class="contact-section-content">
@@ -135,7 +150,7 @@
       </div>
 
       <!-- SERVICES -->
-      <div class="services-section">
+      <div class="services-section" data-aos="fade-up" data-aos-offset="300">
         <div class="container-wrapper">
           <div class="section-header">
             <h1>Special Services for Our Patients</h1>
@@ -208,7 +223,7 @@
       </div>
 
       <!-- DOCTORS -->
-      <div class="doctors-section">
+      <div class="doctors-section" data-aos="fade-up" data-aos-offset="300">
         <div class="container-wrapper">
           <div class="section-header">
             <h1>Our Highly Qualified Doctors</h1>
@@ -246,11 +261,8 @@
         </div>
       </div>
 
-      <!-- TESTIMONIALS -->
-      <!-- <div></div> -->
-
       <!-- GET STARTED -->
-      <div class="get-started-section">
+      <div class="get-started-section" data-aos="fade-up" data-aos-offset="300">
         <div class="container-wrapper">
           <div class="get-started-section-container">
             <div class="get-started-box">
@@ -264,7 +276,7 @@
       </div>
 
       <!-- FOOTER -->
-      <div class="footer-section">
+      <div class="footer-section" data-aos="fade-up">
         <div class="container-wrapper">
           <div class="footer-section-container">
             <div class="footer-details">
@@ -310,12 +322,29 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <p>Copyright 2021. Crafted with love</p>
+            <p>Copyright &copy; 2021. Crafted with love</p>
           </div>
         </div>
       </div>
 
-      <!--  -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+      <script>
+        $(document).ready(function () {
+          $("#hamburger-button").on("click", function () {
+            const linksVisible = $("#nav-links").is(":visible");
+
+            if (linksVisible) {
+              $("#nav-links").hide();
+            } else {
+              $("#nav-links").css("display", "flex");
+            }
+          });
+        });
+      </script>
     </div>
   </body>
 </html>

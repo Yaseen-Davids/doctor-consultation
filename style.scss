@@ -3,6 +3,11 @@
 $backgroundColor: #fcf3ec;
 $dotColor: rgb(236, 129, 29);
 
+/*
+  BLACK COFFEE
+  #342e37
+*/
+
 * {
   margin: 0;
 }
@@ -35,13 +40,12 @@ $dotColor: rgb(236, 129, 29);
 }
 
 .container-wrapper {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
   position: relative;
 }
 
 .home-section {
-  // display: none;
   height: 550px;
   background-color: $backgroundColor;
 
@@ -65,10 +69,15 @@ $dotColor: rgb(236, 129, 29);
       }
     }
 
+    .home-nav-hamburger-wrapper {
+      display: none;
+    }
+
     .home-nav-pages {
       font-family: "Poppins", sans-serif;
       display: flex;
       align-items: center;
+
       a {
         font-size: 16px;
         color: #888;
@@ -121,7 +130,7 @@ $dotColor: rgb(236, 129, 29);
         position: absolute;
         bottom: 0;
         height: 85%;
-        width: 400px;
+        width: 450px;
       }
     }
   }
@@ -150,7 +159,7 @@ $dotColor: rgb(236, 129, 29);
   .booking-section-content {
     display: flex;
     margin-top: 30px;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .booking-box {
       display: flex;
@@ -176,7 +185,6 @@ $dotColor: rgb(236, 129, 29);
 }
 
 .contact-section {
-  // display: none;
   background-color: #fbf6fc;
 
   .contact-section-header {
@@ -199,7 +207,7 @@ $dotColor: rgb(236, 129, 29);
 
     .contact-section-content-info {
       display: flex;
-      gap: 40px;
+      gap: 30px;
       flex-direction: column;
 
       h1 {
@@ -216,7 +224,6 @@ $dotColor: rgb(236, 129, 29);
 }
 
 .services-section {
-  // display: none;
   .services-section-content {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -254,7 +261,6 @@ $dotColor: rgb(236, 129, 29);
 }
 
 .doctors-section {
-  // display: none;
   .doctors-section-container {
     margin-top: 30px;
     display: flex;
@@ -296,7 +302,6 @@ $dotColor: rgb(236, 129, 29);
 }
 
 .get-started-section {
-  // display: none;
   .get-started-section-container {
     height: 300px;
     background-color: $backgroundColor;
@@ -323,7 +328,6 @@ $dotColor: rgb(236, 129, 29);
 }
 
 .footer-section {
-  // display: none;
   .footer-section-container {
     display: grid;
     grid-template-columns: 2fr repeat(4, 1fr);
@@ -383,3 +387,5 @@ $dotColor: rgb(236, 129, 29);
     height: 60px;
   }
 }
+
+@import "./responsive";

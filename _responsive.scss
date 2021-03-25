@@ -1,0 +1,335 @@
+@media (max-width: 700px) {
+  $sectionHeaderFontSize: 30px;
+  $sectionSubHeaderFontSize: 16px;
+  $sectionInfoHeaderFontSize: 18px;
+  $sectionInfoFontSize: 15px;
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+  }
+
+  .btn-big {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .container-wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .home-section {
+    height: 450px;
+    background-color: $backgroundColor;
+
+    .home-nav {
+      height: 60px;
+      position: absolute;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      z-index: 10000;
+
+      .home-nav-logo {
+        @include content-header;
+        font-weight: bold;
+        font-size: 25px;
+        align-items: center;
+
+        .home-nav-logo-dot {
+          color: $dotColor;
+        }
+      }
+
+      .home-nav-hamburger-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        a {
+          color: $dotColor;
+          font-size: 25px;
+        }
+      }
+
+      .home-nav-pages {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        justify-content: flex-end;
+        border-radius: 5px;
+        background-color: #342e37;
+
+        a:first-child {
+          margin-top: 120px;
+        }
+
+        a {
+          font-size: 20px;
+          color: #fff;
+          text-decoration: none;
+          margin-left: 0px;
+          margin-right: 0px;
+          &:hover {
+            transition: all 0.3s;
+            color: #fff;
+          }
+        }
+        .home-nav-register {
+          margin-left: 10px;
+          margin-bottom: 120px;
+          font-size: 16px;
+          padding: 8px 20px;
+        }
+      }
+    }
+
+    .home-info {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+      height: 500px;
+
+      .home-info-content {
+        .home-info-content-wrapper {
+          position: relative;
+          top: 0%;
+          left: 0%;
+          transform: none;
+          height: 100%;
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+
+      .home-info-image {
+        display: none;
+      }
+    }
+  }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+    gap: 0px;
+
+    h1 {
+      font-size: $sectionHeaderFontSize;
+    }
+    p {
+      font-size: $sectionSubHeaderFontSize;
+    }
+  }
+
+  .booking-section {
+    .booking-section-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 10px;
+      row-gap: 30px;
+      column-gap: 10px;
+
+      .booking-box {
+        .booking-box-header {
+          font-size: $sectionInfoHeaderFontSize;
+        }
+
+        .booking-box-info {
+          font-size: $sectionInfoFontSize;
+        }
+      }
+    }
+  }
+
+  .contact-section {
+    .contact-section-header {
+      height: 20px;
+    }
+
+    .contact-section-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 20px;
+
+      .contact-section-content-image {
+        display: none;
+      }
+
+      .contact-section-content-info {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        h1 {
+          font-size: $sectionHeaderFontSize;
+        }
+        p {
+          @include content-info;
+          font-size: $sectionInfoFontSize;
+        }
+      }
+    }
+  }
+
+  .services-section {
+    .services-section-content {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      margin-top: 10px;
+      gap: 20px;
+
+      .services-box-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .services-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        .services-box-number {
+          font-size: $sectionInfoHeaderFontSize;
+        }
+        .services-box-header {
+          font-size: $sectionInfoHeaderFontSize;
+        }
+        .services-box-info {
+          font-size: $sectionInfoFontSize;
+        }
+      }
+    }
+  }
+
+  .doctors-section {
+    .doctors-section-container {
+      margin-top: 0px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+
+      .doctors-box {
+        gap: 10px;
+
+        .doctors-box-image {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .doctors-box-content {
+          display: flex;
+          gap: 5px;
+          flex-direction: column;
+
+          .doctors-box-header {
+            font-size: $sectionInfoHeaderFontSize;
+          }
+
+          .doctors-box-info {
+            font-size: $sectionInfoFontSize;
+          }
+        }
+      }
+    }
+  }
+
+  .get-started-section {
+    .get-started-section-container {
+      border-radius: 20px;
+
+      .get-started-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        height: 100%;
+        justify-content: center;
+        gap: 10px;
+
+        h2 {
+          font-size: $sectionHeaderFontSize;
+        }
+      }
+    }
+  }
+
+  .footer-section {
+    .footer-section-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      .footer-details {
+        gap: 5px;
+        h2 {
+          font-size: $sectionHeaderFontSize;
+        }
+        h3 {
+          font-size: $sectionInfoHeaderFontSize;
+        }
+
+        .footer-row-info {
+          gap: 10px;
+          a {
+            font-size: $sectionInfoFontSize;
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: $sectionInfoFontSize;
+      height: 30px;
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+  .container-wrapper {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  .container-wrapper {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+  .container-wrapper {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 2000px) {
+  .container-wrapper {
+    margin-left: 350px;
+    margin-right: 350px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .container-wrapper {
+    margin-left: 550px;
+    margin-right: 550px;
+  }
+}
